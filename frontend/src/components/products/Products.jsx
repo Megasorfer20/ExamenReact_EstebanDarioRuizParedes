@@ -3,17 +3,14 @@ import Carousel from "react-bootstrap/Carousel";
 import Estrella from "../../Estrella.svg";
 import axios from "axios";
 import "./Products.css";
-import Button from "react-bootstrap/Button";
-import Modal from "react-bootstrap/Modal";
+import Modal from "./Modal";
 
 function Products() {
   const [defineProducts, setDefineProducts] = useState([]);
   const [stars, setStars] = useState([]);
 
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
 
   useEffect(() => {
     axios
@@ -72,7 +69,7 @@ function Products() {
                 <h4 className="reyado">$ {data.precio}</h4>
               )}
             </div>
-            <button class="cssbuttons-io-button" onClick={handleShow}>
+            <button class="cssbuttons-io-button" onClick={() => Toggle()}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -89,29 +86,8 @@ function Products() {
             </button>
           </div>
 
-          <Modal
-            show={show}
-            onHide={handleClose}
-            backdrop="static"
-            keyboard={false}
-          >
-            <Modal.Header closeButton>
-              <Modal.Title>
 
-                <Button variant="secondary" onClick={handleClose}>
-                  X
-                </Button>
-              </Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-              <h2>{data.nombre}</h2>
-              <img src={data.imagen[0]} alt={data.nombre} />
-            </Modal.Body>
-            <Modal.Footer>
-              <input type="number" />
-              <Button variant="primary">Agregar</Button>
-            </Modal.Footer>
-          </Modal>
+          <Modal show={modal} title= "My Modal" close={Toggle} data={data}/>
         </div>
       ))}
     </>
