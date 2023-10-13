@@ -1,5 +1,5 @@
 
-const Modal = ({ show, close }) => {
+const Modal = ({ show, close,data }) => {
 
 
   return (
