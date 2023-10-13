@@ -1,0 +1,66 @@
+.card {
+  width: 90%;
+  /*height: 235px;*/
+  position: relative;
+  padding: 25px;
+  background: radial-gradient(
+      178.94% 106.41% at 26.42% 106.41%,
+      #fff7b1 0%,
+      rgba(255, 255, 255, 0) 71.88%
+    ),
+    #ffffff;
+  box-shadow: 0px 155px 62px rgba(0, 0, 0, 0.01),
+    0px 87px 52px rgba(0, 0, 0, 0.05), 0px 39px 39px rgba(0, 0, 0, 0.09),
+    0px 10px 21px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
+  border-radius: 23px;
+  transition: all 0.8s cubic-bezier(0.15, 0.83, 0.66, 1);
+  cursor: pointer;
+  margin: 1.5rem;
+  display: flex;
+}
+
+.card{
+  display: flex;
+  text-align: left;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.descuento{
+  display: flex;
+}
+
+.reyado{
+  text-decoration: line-through; 
+  margin-left: 0.8rem;
+}
+
+.cssbuttons-io-button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 0.7em 1.4em 0.7em 1.1em;
+    color: white;
+    background: #ad5389;
+    background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+    border: none;
+    box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+    letter-spacing: 0.05em;
+    border-radius: 20em;
+  }
+  
+  .cssbuttons-io-button svg {
+    margin-right: 6px;
+  }
+  
+  .cssbuttons-io-button:hover {
+    box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+  }
+  
+  .cssbuttons-io-button:active {
+    box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+  }
